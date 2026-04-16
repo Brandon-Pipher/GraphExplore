@@ -1,0 +1,31 @@
+[workspace]
+authors = ["Brandon Pipher <mail@brandonpipher.com>"]
+channels = ["conda-forge"]
+name = "GraphExplore"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+kernel-install = "python -m ipykernel install --user --name GraphExplore-env --display-name 'Pixi: GraphExplore'"
+kernel-remove = "jupyter kernelspec remove -y GraphExplore-env"
+list = "jupyter kernelspec list"
+
+[system-requirements]
+cuda = "12.0"
+
+[dependencies]
+python = ">=3.11,<3.13"
+duckdb = "*"
+pandas = "*"
+scipy = "*"
+scikit-learn = "*"
+matplotlib = "*"
+seaborn = "*"
+ipykernel = "*"
+jupyter = "*"
+jupyterlab = "*"
+networkx = "*"
+
+[pypi-dependencies]
+torch = "*"
+torch_geometric = "*"
